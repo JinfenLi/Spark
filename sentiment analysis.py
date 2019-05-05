@@ -112,8 +112,8 @@ for j in range(len(grid)):
     print("Fitting model {}".format(j+1))
     model = en_lr_estimator.fit(training_df, grid[j])
     all_models.append(model)
-accuracies = [m.\
-    transform(validation_df).\
-    select(fn.avg(fn.expr('float(score = prediction)')).alias('accuracy')).\
-    first().\
-    accuracy for m in all_models]
+# accuracies = [m.\
+#     transform(validation_df).\
+#     select(fn.avg(fn.expr('float(score = prediction)')).alias('accuracy')).\
+#     first().\
+#     accuracy for m in all_models]
